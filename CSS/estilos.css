@@ -1,0 +1,288 @@
+/*Estilo*/
+body{
+    /*Fuente legible y moderna*/
+    font-family: Arial, Helvetica, sans-serif;
+    /*Eliminar el margen predeterminado*/
+    margin: 0;
+    /*Eliminar el relleno predeterminado*/
+    padding: o;
+    background-color: #c6d6d6;
+    color: #333;
+}
+
+/*Encabezado*/
+.encabezado{
+    background-color: #dee7e7;
+    padding: 0;
+    text-align: center;
+}
+
+/* Carrusel Galería */
+.slider-css-galeria {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  padding: 15px 15rem; /* Espacio a los lados */
+  box-sizing: border-box;
+}
+
+.slides-galeria {
+  display: flex;
+  gap: 1rem;
+  width: calc(37 * (20% + 1rem)); /* 36 + 1 imagen de margen de seguridad */
+  animation: deslizar-galeria 500s linear infinite;
+}
+
+.slides-galeria img {
+  width: 20%;
+  max-width: 400px;
+  height: auto;
+  flex-shrink: 0;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .slides-galeria img {
+    width: 25%;
+  }
+}
+
+@media (max-width: 768px) {
+  .slides-galeria img {
+    width: 33.33%;
+  }
+}
+
+@media (max-width: 480px) {
+  .slides-galeria img {
+    width: 50%;
+  }
+}
+
+/* Animación imágenes = 400s */
+@keyframes deslizar-galeria {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-440%); } /* 22 imágenes * 20% ancho */
+}
+
+/*Navegación*/
+.navegacion ul{
+    display: flex; /*Permite alinear el menú horizontalmente*/
+    /*flex-direction: row; /*Permite alinear el menú de acuerdo al tamaño de la pantalla*/
+    flex-wrap: wrap; /* para que se adapte en pantallas pequeñas */
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none; /*Removerlas viñetas*/
+    background-color: #282832;    
+}
+
+/*Navegación responsiva
+@media (max-width: 600px){
+  .navegacion{
+    flex-direction: column;
+  }
+  .navegacion li{
+    margin: 0;
+  }
+}*/
+
+/**/
+.navegacion li{
+    margin:0 30px;
+    font-size:x-large;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.navegacion a{
+    color: #c6d6d6;
+    text-decoration: none; /*Remueve el subrayado*/
+    padding: 10px;
+    display: block;
+}
+
+.navegacion a:hover, /*Cambia el color del navegador al pasar el mouse*/
+.navegacion .activo{
+    background-color: #77181e;
+    color: #c6d6d6;
+}
+
+/* ----- SECCIÓN CALZADO ----- */
+.seccion {
+  background-color: #dee7e7; /* Fondo  */
+  padding: 3rem 2rem;
+}
+
+.titulo-seccion {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #282832;
+}
+
+/* Contenedor de texto + imagen */
+.contenido-seccion {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  padding: 0 1rem;
+}
+
+/* Columna de texto */
+.texto-seccion {
+  flex: 1 1 500px;
+  max-width: 600px;
+}
+
+.texto-seccion .slogan {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #77181e;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.texto-seccion p {
+  font-size: 1.1rem;
+  color: #282832;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.texto-nosotros{
+  font-size: 1.1rem;
+  color: #282832;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.titulo-subseccion{
+  font-size: 1.3rem;
+  color: #77181e;
+  margin-bottom: 1rem;
+}
+
+/* Columna del logo */
+.logo-seccion {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.logo-seccion img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .contenido-seccion {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .texto-seccion {
+    max-width: 100%;
+  }
+}
+
+/*Secciones generales*/
+.seccion{
+    max-width: 1000px; /*Ancho máximo de la sección*/
+    margin: 20px auto; /*Centra verticalmente*/
+    background-color: white;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/*Pie de pagina*/
+.pie {
+    background-color: #282832;
+    color: #c6d6d6;
+    text-align: center;
+    padding: 20px;
+}
+
+/* imagenes de dama*/
+.titulo{
+  display: flex;
+  text-align:center;
+  width: 50%;
+  height: 400px;
+  font-size:50px;
+  font-style: italic;
+}
+.titulo img {
+  padding-left: 100px; ;
+  display: flex;
+  width: 791px 418px;
+  margin:0;
+}  
+.galeriap {
+  display: grid;
+  background: #c6d6d6;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 50px;
+}
+.galeriap img {
+  color: rgb(5, 5, 5);
+  padding: 0px;
+  width:100%;
+  height: auto;
+  object-fit: cover ;
+  border-radius: 10px;
+  }
+.descripcion{
+  color: #282832;
+  text-align: center;
+  padding: 5px;
+  margin: 0.5px;
+}
+button {
+  border: none;
+  color: rgb(218, 217, 241);
+  padding: 5px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  font-size: 16px;
+  margin: 2px 110px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #282832; 
+  color:#c6d6d6; 
+  border: 2px solid #282832;
+  border-radius: 10px;
+}
+.button1:hover {
+  background-color: #a92727;
+  color: #c6d6d6;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .galeriap {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .titulo{
+    height: 100px;
+    font-size:10px;
+  }
+}
